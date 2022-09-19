@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "994ba536-6517-41ca-a9d4-3a97ac353aa2",
+		"name": "ViaCep",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Consulta Cep",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "ca",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cep\": \"18010010\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44316/api/Cep/GetCep/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44316",
+					"path": [
+						"api",
+						"Cep",
+						"GetCep",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibWFyY29zdmluaSIsInJvbGUiOiJhZG1pbiIsIm5iZiI6MTY2MDgzMDE1NiwiZXhwIjoxNjYwODM3MzU2LCJpYXQiOjE2NjA4MzAxNTZ9.66dRIG7-S5j_zwuknWO7d9xxkFrqore6hoTaX0fPnTs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Usuario\":\"marcosvini\",\r\n    \"Senha\":\"parli\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44316/api/login/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44316",
+					"path": [
+						"api",
+						"login",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
